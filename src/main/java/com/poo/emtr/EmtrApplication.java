@@ -1,0 +1,13 @@
+package com.poo.emtr;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EmtrApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EmtrApplication.class, args);
+	}
+
+}
