@@ -26,7 +26,160 @@ Este projeto foi desenvolvido na <a href="https://www.usf.edu.br">Universidade S
 <br>
 
 <h2 align="left">👷‍♂️ Arquitetura</h2>
-Escrever as parada de classe, entidade, etc aqui.
+<h3>Entidades:</h3> 
+
+- `Cliente` 
+   - Classe que representa os clientes do EMTR
+   - Possui os atributos id, cpf e nome
+ 
+- `Viagem` 
+   - Classe que representa as viagens disponíveis da EMTR
+   - Possui os atributos id, origem, destino, data e horario
+
+- `Lugar`
+   - Classe que representa os lugares que os clientes podem escolher em cada viagem
+   - Possui os atributos id, id_viagem e id_cliente
+
+<h3>Controladores:</h3> 
+<p>Mapeiam as requisições HTTP e definem métodos especificos para GET, POST, PUT e DELETE</p>
+
+<h4>ClienteController:</h4>
+
+   - `GET`
+      - Endpoint: `/clientes`
+      - Exemplo de resposta:
+      ```bash
+      [
+         {
+             "id": 1,
+             "cpf": "36691620038",
+             "nome": "Shaolin Matador de Porco"
+         }
+      ]
+      ```
+
+   - `POST`
+     - Endpoint: `/clientes`
+     - Exemplo de entrada:
+     ```bash
+     [
+        {
+            "cpf": "50353283096",
+            "nome": "Jeferson Caminhões"
+        }
+     ]
+     ```
+  
+  - `PUT`
+      - Endpoint: `/clientes/{id}`
+      - Exemplo de entrada:
+      ```bash
+      [
+         {
+             "cpf": "36691620038",
+             "nome": "Flavin do Pneu"
+         }
+      ]
+      ```
+
+   - `DELETE`
+     - Endpoint: `/clientes/{id}`
+
+<h4>ViagemController:</h4>
+
+   - `GET`
+      - Endpoint: `/viagens`
+      - Exemplo de resposta:
+      ```bash
+      [
+         {
+             "id": 1,
+             "origem": "Itatiba",
+             "destino": "São Paulo",
+             "data": "25/11/2023",
+             "horario": "19:30"
+         }
+      ]
+      ```
+
+   - `POST`
+     - Endpoint: `/viagens`
+     - Exemplo de entrada:
+     ```bash
+     [
+        {
+            "origem": "Itatiba",
+            "destino": "São Paulo",
+            "data": "25/11/2023",
+            "horario": "19:30"
+        }
+     ]
+     ```
+  
+  - `PUT`
+      - Endpoint: `/viagens/{id}`
+      - Exemplo de entrada:
+      ```bash
+      [
+         {
+             "origem": "Itatiba",
+             "destino": "São Paulo",
+             "data": "26/11/2023",
+             "horario": "19:30"
+         }
+      ]
+      ```
+
+   - `DELETE`
+     - Endpoint: `/viagens/{id}`
+
+<h4>LugarController:</h4>
+
+   - `GET`
+      - Endpoint: `/lugares`
+      - Exemplo de resposta:
+      ```bash
+      [
+         {
+             "id": 1,
+             "id_viagem": "3",
+             "id_cliente": "1"
+         }
+      ]
+      ```
+
+   - `POST`
+     - Endpoint: `/lugares`
+     - Exemplo de entrada:
+     ```bash
+     [
+        {
+            "id_viagem": "3",
+            "id_cliente": "1"
+        }
+     ]
+     ```
+  
+  - `PUT`
+      - Endpoint: `/lugares/{id}`
+      - Exemplo de entrada:
+      ```bash
+      [
+         {
+             "id_viagem": "3",
+             "id_cliente": "7"
+         }
+      ]
+      ```
+
+   - `DELETE`
+     - Endpoint: `/lugares/{id}`
+
+<h3>Repositórios:</h3>
+
+- `ClienteRepository`
+- `ViagemRepository`
+- `LugarRepository`
 
 <br>
 
@@ -34,8 +187,8 @@ Escrever as parada de classe, entidade, etc aqui.
 
 - `Funcionalidade 1` `Cadastro de Clientes`: O programa permite o cadastro do cliente através de seu nome e CPF;
 - `Funcionalidade 2` `Verificação de CPF`: O cliente só é cadastrado caso o cpf fornecido seja um doocumento válido, caso contrário é emitido um erro e o cadastro não é realizado;
-- `Funcionalidade 3` `Seleção de rota`: Para este programa, são utilzadas 3 rotas de ônibus diferentes, é possível cadastrar o cliente na rota escolhida pelo mesmo;
-- `Funcionalidade 4` `Seleção de assento`: Além de ser permitido a escolha da rota, o cliente é colocado no assento de sua escolha, assim não tem comflitos de lugares.
+- `Funcionalidade 3` `Criação de rota/viagem`: É possível criar uma nova viagem, definindo origem, destino, data e horario;
+- `Funcionalidade 4` `Seleção de assento`: O cliente pode escolher o assento que desejar na viagem que desejar reservando um lugar, assim não tem conflitos de lugares.
 
 <br>
 
