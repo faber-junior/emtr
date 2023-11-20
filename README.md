@@ -14,7 +14,7 @@ Este projeto foi desenvolvido na <a href="https://www.usf.edu.br">Universidade S
 
 <h2 align="left">⏯️ Como funciona?</h2>
 
-[![Assista ao vídeo](https://img.youtube.com/vi/gy1B3agGNxw/0.jpg)](https://youtu.be/7wZsNsnhzCw)
+[![Assista ao vídeo](https://miro.medium.com/v2/resize:fit:1000/1*XtjiQD35ja0DcA9H-JuM-g.png)](https://youtu.be/7wZsNsnhzCw)
 <br>
 
 <h2 align="left">🧮 Tecnologias Empregadas</h2>
