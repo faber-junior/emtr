@@ -198,7 +198,7 @@ Este projeto foi desenvolvido na <a href="https://www.usf.edu.br">Universidade S
   `git clone https://github.com/faber-junior/emtr.git`
 
 - Download: <br>
-  [![MediaFire](https://cdn2.iconfinder.com/data/icons/metro-ui-icon-set/128/MediaFire.png)](URL_do_seu_link)
+  [![MediaFire](https://cdn2.iconfinder.com/data/icons/metro-ui-icon-set/128/MediaFire.png)](https://www.mediafire.com/file/f325q7ojkzkbe2s/emtr-main.zip/file)
 
 <br>
 
